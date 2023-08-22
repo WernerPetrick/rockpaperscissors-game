@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Nixie+One&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+header{
+    margin: 0 auto;
+    text-align: center;
+}
+
+body{
+    background: hsla(208, 7%, 55%, 1);
+    background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+}
+
+.standard{
+    background: hsla(208, 7%, 55%, 1);
+    background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+}
+
+.elemental{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.891281512605042) 50%, rgba(252,176,69,1) 100%);
+}
+
+.fantasy{
+    background: hsla(148, 89%, 78%, 1);
+    background: linear-gradient(90deg, hsla(148, 89%, 78%, 1) 0%, hsla(210, 81%, 22%, 1) 100%);
+}
+
+.game-type{
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 600px;
+    font-size: 1.2em;
+}
+
+.radio-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-label img{
+    width: 50px;
+}
+
+h1{
+    font-family: 'Averia Serif Libre', cursive;
+    padding: 25px;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.weapons{
+    display: flex;
+    margin: 0 auto 75px auto;
+    flex-grow: 1;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.weapon-card{
+    text-align: center;
+}
+
+.weapon-img {
+    width: 300px;
+    border-radius: 12px;
+}
+
+.weapon-img:hover{
+    box-shadow: 0px 0px 18px -2px rgba(125, 121, 95, 1);
+}
+
+.weapon-name{
+    font-size: 1.6em;
+    
+}
+
+.weapon-description{
+    font-size: 1.2em;
+    font-family: 'Nixie One', cursive;
+}
+
+.results{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.result-text{
+    font-size: 2.9em;
+}
+
+.result-img{
+    width: 200px;
+    border-radius: 12px;
+}
+
+.result-text{
+    font-size: 1.9em;
+
+}
+
+.computer-choice{
+    font-size: 1.3em;
+}
+
+.btn-area{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+.replay{
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1.3em;
+    margin: 0 auto;
+    cursor: pointer;
+    color: #1E2019;
+    
+}
+
+.replay:hover{
+    background-color: #9DAEB0;
+    color: #F7F4EA;
+    padding: 13px;
+    font-size: 1.32em;
+    box-shadow: 2px 2px 7px 1px rgba(125, 121, 95, 1);
+}

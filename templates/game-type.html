@@ -1,0 +1,22 @@
+<div id="id">
+    <section class="weapons" >
+    <div class="weapon-card">
+        <img class="weapon-img" src={{first_image}} hx-post="/user_choice" hx-vals='{"selected_weapon": "{{first_character}}"}' hx-trigger="click" hx-target="#display-results">
+        <p class="weapon-name">{{first_character}}</p>
+        <p class="weapon-description">Destroys: {{first_enemy}}</p>
+        <p class="weapon-description">Weak-Against: {{first_weakness}}</p>
+    </div>
+    <div class="weapon-card">
+        <img class="weapon-img" src={{second_image}} hx-post="/user_choice" hx-vals='{"selected_weapon": "{{second_character}}"}' hx-trigger="click" hx-target="#display-results">
+        <p class="weapon-name">{{second_character}}</p>
+        <p class="weapon-description">Destroys: {{second_enemy}}</p>
+        <p class="weapon-description">Weak-Against: {{second_weakness}}</p>
+    </div>
+    <div class="weapon-card">
+        <img class="weapon-img" src={{third_image}}  hx-post="/user_choice" hx-vals='{"selected_weapon": "{{third_character}}"}' hx-trigger="click" hx-target="#display-results">
+        <p class="weapon-name">{{third_character}}</p>
+        <p class="weapon-description">Destroys: {{third_enemy}}</p>
+        <p class="weapon-description">Weak-Against: {{third_weakness}}</p>
+    </div>
+    </section>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <title>Rock Paper Scissors</title>
+</head>
+<body id="game">
+
+    <header>
+        <div class="game-type">
+            <label for="standard" class="radio-label">
+                <img src="../static/assets/hand-icon.png" alt="">
+                <input type="radio" name="theme" id="standard" value="standard" hx-post="/theme_changer" hx-vals='{"theme": "standard"}' hx-trigger="change" hx-target="#game-area"> Standard
+            </label>
+            <label for="nature" class="radio-label">
+                <img src="../static/assets/leaf_icon.png" alt="">
+                <input type="radio" name="theme" id="nature" value="elemental" hx-post="/theme_changer"hx-vals='{"theme": "elemental"}' hx-trigger="change" hx-target="#game-area"> Elemental
+            </label>
+            <label for="fantasy" class="radio-label">
+                <img src="../static/assets/wizard-icon.png" alt="">
+                <input type="radio" name="theme" id="fantasy" value="fantasy" hx-post="/theme_changer"hx-vals='{"theme": "fantasy"}' hx-trigger="change" hx-target="#game-area"> Fantasy
+            </label>
+        </div>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <main id="display-results">
+        <div id="game-area">
+            <section class="weapons" >
+            <div class="weapon-card">
+                <img class="weapon-img" src="../static/assets/rock.jpg" alt="" hx-post="/user_choice" hx-vals='{"selected_weapon":"Rock"}' hx-trigger="click" hx-target="#display-results">
+                <p class="weapon-name">Rock</p>
+                <p class="weapon-description">Destroys: Scissors</p>
+                <p class="weapon-description">Weak-Against: Paper</p>
+            </div>
+            <div class="weapon-card">
+                <img class="weapon-img" src="../static/assets/paper.jpg" alt="" hx-post="/user_choice" hx-vals='{"selected_weapon":"Paper"}' hx-trigger="click" hx-target="#display-results">
+                <p class="weapon-name">Paper</p>
+                <p class="weapon-description">Destroys: Rock</p>
+                <p class="weapon-description">Weak-Against: Scissors</p>
+            </div>
+            <div class="weapon-card">
+                <img class="weapon-img" src="../static/assets/scissors.jpg" alt="" hx-post="/user_choice" hx-vals='{"selected_weapon":"Scissors"}' hx-trigger="click" hx-target="#display-results">
+                <p class="weapon-name">Scissors</p>
+                <p class="weapon-description">Destroys: Paper</p>
+                <p class="weapon-description">Weak-Against: Rock</p>
+            </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    
+</body>
+</html>

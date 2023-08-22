@@ -1,0 +1,11 @@
+Rock Paper Scissors
+
+Required Tasks
+
+1 - Interface that shows the user the options between Rock, Paper, Scissors
+2 - User should be able to select an option and the game engine should be able to receive and process the input
+  - PC should also select an option (without knowledge of user input)
+  - Game engine should determine who wins.
+3 - Display the results to the user
+  - Results should contain the computer players selected option
+  - Results should contain the winner

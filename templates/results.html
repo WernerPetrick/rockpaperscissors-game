@@ -1,0 +1,33 @@
+<div class="results">
+    <div >
+        {%if win_condition is not none%}
+            {% if win_condition %}
+                <p class="result-text">You won</p>
+            {% elif not win_condition %}
+                <p class="result-text">You lose</p>
+            {% endif %}
+        {% else %}
+            <p class="result-text">It's a draw</p>
+        {% endif %}
+        <p class="computer-choice">Computer Chose: {{pc_choice}}</p>
+        <p class="computer-choice">You Chose: {{user_choice}}</p>
+        
+    </div>
+    <div>
+        {%if win_condition is not none%}
+            {% if win_condition %}
+            <img src="../static/assets/trophy.jpg" alt="" class="result-img">
+            {% elif not win_condition %}
+            <img src="../static/assets/child_crying.jpg" alt="" class="result-img">
+            {% endif %}
+        {% else %}
+            <p>It's a draw</p>
+        {% endif %}
+    </div>
+</div>
+
+<br>
+    
+<div class="btn-area">
+    <button class="replay" hx-get="/" hx-target="#game">Play Again?</button>
+</div>
